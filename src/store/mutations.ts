@@ -2,32 +2,32 @@ import * as types from './mutation-types';
 
 // TSのエラー解消が必要
 export default {
-  [types.AUTH_LOGIN] (state: String, payload:String ) {
+  [types.AUTH_LOGIN] (state: string, payload:string ) {
     // TODO
     throw new Error('AUTH_LOGIN mutation should be implemented');
   },
 
-  [types.FETCH_ALL_TASKLIST] (state: String, payload:String ) {
+  [types.FETCH_ALL_TASKLIST] ({ state, payload }: { state: string; payload: string; }) {
     // TODO
     throw new Error('FETCH_ALL_TASKLIST mutation should be implemented');
   },
 
-  [types.ADD_TASK] (state: String, payload:String ) {
+  [types.ADD_TASK] (state: string, payload:string ) {
     // TODO
     throw new Error('ADD_TASK mutation should be implemented');
   },
 
-  [types.UPDATE_TASK] (state: String, payload:String ) {
+  [types.UPDATE_TASK] (state: string, payload:string ) {
     // TODO
     throw new Error('UPDATE_TASK mutation should be implemented');
   },
 
-  [types.REMOVE_TASK] (state: String, payload:String ) {
+  [types.REMOVE_TASK] (state: string, payload:string ) {
     // TODO
     throw new Error('REMOVE_TASK mutation should be implemented');
   },
 
-  [types.AUTH_LOGOUT] (state: String, payload:String ) {
+  [types.AUTH_LOGOUT] (state: string, payload:string ) {
     // TODO
     throw new Error('AUTH_LOGOUT mutation should be implemented');
   },
