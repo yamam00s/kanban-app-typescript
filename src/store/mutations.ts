@@ -1,6 +1,5 @@
 import * as types from './mutation-types';
 
-// TSのエラー解消が必要
 export default {
   [types.AUTH_LOGIN] (state: string, payload:string ) {
     // TODO
