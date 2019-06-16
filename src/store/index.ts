@@ -4,12 +4,14 @@ import actions from './actions';
 import getters from './getters';
 import mutations from './mutations';
 
+import { RootState } from '../types/state';
+
 Vue.use(Vuex);
 
 // 状態`Auth`と状態`Board`をVuexのstateで一元管理できるようにする
-const state = {
-  auth: { // 状態`Atuh`
-    token: null, // `tokenはnullで初期化`
+const state: RootState = {
+  auth: {
+    token: null,
     userId: null // `userIdはnullで初期化`
   },
   board: { // 状態`Board`
@@ -17,8 +19,10 @@ const state = {
   }
 }
 export default new Vuex.Store({
+  // エラー消す
   state, // 定義したstateを`state`オプションに指定
   getters,
+  // エラー消す
   actions,
   mutations,
   strict: process.env.NODE_ENV !== 'production'

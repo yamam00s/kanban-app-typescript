@@ -1,6 +1,8 @@
 import * as types from './mutation-types';
+import { MutationTree } from 'vuex';
+import { TodoState } from '../types/state';
 
-export default {
+const mutations: MutationTree<TodoState> = {
   [types.AUTH_LOGIN] (state: any, payload:any) {
     // TODO
     throw new Error('AUTH_LOGIN mutation should be implemented');
@@ -31,3 +33,5 @@ export default {
     throw new Error('AUTH_LOGOUT mutation should be implemented');
   },
 }
+
+export default mutations;

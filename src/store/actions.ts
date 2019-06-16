@@ -1,8 +1,10 @@
 import * as types from './mutation-types';
 import { Auth, List, Task } from '../api/index';
+import { ActionTree } from "vuex";
+import { TodoState, RootState } from '../types/state';
 
-export default {
-  login: ({ commit }) => {
+const actions: ActionTree<TodoState, RootState> = {
+  login:  ({ commit }) => {
     // TODO
     throw new Error('login action should be implemented');
   },
@@ -32,3 +34,5 @@ export default {
     throw new Error('logout action should be implemented');
   }
 }
+
+export default actions;
