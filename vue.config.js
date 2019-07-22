@@ -1,4 +1,4 @@
-const backend = require('./dev-serve');
+const backend = require('./dev-server');
 
 module.exports = {
   // ...
