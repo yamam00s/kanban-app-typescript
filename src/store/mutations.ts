@@ -4,8 +4,7 @@ import { TodoState } from '../types/state';
 
 const mutations: MutationTree<TodoState> = {
   [types.AUTH_LOGIN] (state: any, payload:any) {
-    // TODO
-    throw new Error('AUTH_LOGIN mutation should be implemented');
+    state.auth = payload
   },
 
   [types.FETCH_ALL_TASKLIST] (state: any, payload: any) {
