@@ -4,9 +4,12 @@ import { ActionTree } from "vuex";
 import { TodoState, RootState } from '../types/state';
 
 const actions: ActionTree<TodoState, RootState> = {
-  login:  ({ commit }) => {
-    // TODO
-    throw new Error('login action should be implemented');
+  login:  ({ commit }, authInfo) => {
+    return Auth.login(authInfo)
+      .then(({ token, userId }) => {
+        commit(types.AUTH_LOGIN, { token, userId })
+      })
+      .catch(err => { throw err })
   },
 
   fetchLists: ({ commit }) => {
